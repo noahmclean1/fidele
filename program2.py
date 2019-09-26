@@ -8,14 +8,16 @@ worksheet = workbook.add_worksheet()
 underline = workbook.add_format({'underline': True})
 
 input_file = sys.argv[1]
+freq_file = sys.argv[2]
 
+'''
 with open(input_file, 'rb') as f:
 	doc = Document(input_file)
 	fullText = []
 	for para in doc.paragraphs:
 		fullText.append(para.text)
 	print('\n'.join(fullText))
-
+'''
 # Create Excel file to write into
 
 # To read/write into excel files, look at the following snippet:
@@ -49,6 +51,17 @@ workbook.close()
 
 
 # Open the files
+unitListFile = open(input_file, 'rb')
+ulf = Document(unitListFile)
+unitlist = []
+for para in ulf.paragraphs:
+	unitlist.append(para.text)
+
+freqListFile = open(freq_file, 'rb')
+flf = Document(freqListFile)
+freqlist = []
+for para in flf.paragraphs:
+	freqlist.append(para.text)
 
 # Create Excel file to write into
 
