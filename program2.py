@@ -1,6 +1,6 @@
 import sys
 from docx import Document # may need to install this package! 
-from io import StringIO
+import csv
 
 input_file = sys.argv[1]
 
@@ -10,4 +10,5 @@ with open(input_file, 'rb') as f:
 	for para in doc.paragraphs:
 		fullText.append(para.text)
 	print('\n'.join(fullText))
-	#source_stream = StringIO(f.read())
+
+# To read/write into CSV files, use csv.reader / csv.writer
