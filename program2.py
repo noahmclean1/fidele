@@ -80,11 +80,13 @@ for units in unitlist:
 		if topword != None:
 			break
 
-	# Check if none of the words were found
+	# Check if none of the words were found, if so, pick the first (random)
 	if topword == None:
-		print("No units from {} were found in the frequency list".format(units))
+		topword = toks[0]
 
 	# Remove B from the read line, sort the rest
+	rest = toks.remove(topword)
+	rest = rest.sort()
 
 	# Write B,[REST OF LINE] with B underlined into XLSX
 	# Write B again, normally, into the right column
