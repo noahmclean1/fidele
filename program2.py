@@ -46,3 +46,13 @@ workbook.close()
 '''
 
 workbook.close()
+=======
+
+# Open the files
+
+# For each line:
+
+# Search for most frequent unit (down frequency list) -> dubbed B
+# Remove B from the read line, sort the rest
+# Write B,[REST OF LINE] with B underlined into XLSX
+# Write B again, normally, into the right column
