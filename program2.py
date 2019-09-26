@@ -16,6 +16,8 @@ with open(input_file, 'rb') as f:
 		fullText.append(para.text)
 	print('\n'.join(fullText))
 
+# Create Excel file to write into
+
 # To read/write into excel files, look at the following snippet:
 
 '''
@@ -45,10 +47,10 @@ worksheet.write_rich_string('A2', underline, 'under', 'line') # 'under' is under
 workbook.close()
 '''
 
-workbook.close()
-=======
 
 # Open the files
+
+# Create Excel file to write into
 
 # For each line:
 
@@ -56,3 +58,12 @@ workbook.close()
 # Remove B from the read line, sort the rest
 # Write B,[REST OF LINE] with B underlined into XLSX
 # Write B again, normally, into the right column
+
+
+
+
+
+workbook.save()
+workbook.close()
+
+
