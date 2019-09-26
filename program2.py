@@ -66,11 +66,28 @@ for para in flf.paragraphs:
 # Create Excel file to write into
 
 # For each line:
+for units in unitlist:
+	# Tokenize the units string
+	toks = units.split(",")
 
-# Search for most frequent unit (down frequency list) -> dubbed B
-# Remove B from the read line, sort the rest
-# Write B,[REST OF LINE] with B underlined into XLSX
-# Write B again, normally, into the right column
+	# Search for most frequent unit (down frequency list) -> dubbed B
+	topword = None
+	for freqword in freqlist:
+		for token in toks:
+			if freqword == token:
+				topword = token
+				break
+		if topword != None:
+			break
+
+	# Check if none of the words were found
+	if topword == None:
+		print("No units from {} were found in the frequency list".format(units))
+
+	# Remove B from the read line, sort the rest
+
+	# Write B,[REST OF LINE] with B underlined into XLSX
+	# Write B again, normally, into the right column
 
 
 
