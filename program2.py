@@ -9,14 +9,16 @@ worksheet = workbook.add_worksheet()
 underline = workbook.add_format({'underline': True})
 
 input_file = sys.argv[1]
+freq_file = sys.argv[2]
 
+'''
 with open(input_file, 'rb') as f:
 	doc = Document(input_file)
 	fullText = []
 	for para in doc.paragraphs:
 		fullText.append(para.text)
 	print('\n'.join(fullText))
-
+'''
 # Create Excel file to write into
 
 # To read/write into excel files, look at the following snippet:
@@ -50,15 +52,43 @@ workbook.close()
 
 
 # Open the files
+unitListFile = open(input_file, 'rb')
+ulf = Document(unitListFile)
+unitlist = []
+for para in ulf.paragraphs:
+	unitlist.append(para.text)
+
+freqListFile = open(freq_file, 'rb')
+flf = Document(freqListFile)
+freqlist = []
+for para in flf.paragraphs:
+	freqlist.append(para.text)
 
 # Create Excel file to write into
 
 # For each line:
+for units in unitlist:
+	# Tokenize the units string
+	toks = units.split(",")
 
-# Search for most frequent unit (down frequency list) -> dubbed B
-# Remove B from the read line, sort the rest
-# Write B,[REST OF LINE] with B underlined into XLSX
-# Write B again, normally, into the right column
+	# Search for most frequent unit (down frequency list) -> dubbed B
+	topword = None
+	for freqword in freqlist:
+		for token in toks:
+			if freqword == token:
+				topword = token
+				break
+		if topword != None:
+			break
+
+	# Check if none of the words were found
+	if topword == None:
+		print("No units from {} were found in the frequency list".format(units))
+
+	# Remove B from the read line, sort the rest
+
+	# Write B,[REST OF LINE] with B underlined into XLSX
+	# Write B again, normally, into the right column
 
 # def mainstream(word_list, freq_list):
     
