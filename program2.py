@@ -1,6 +1,7 @@
 import sys
 from docx import Document # may need to install this package! 
 import xlrd
+import xlwt 
 import xlsxwriter
 #CREATE EXCEL FILE CALLED test.xlsx
 workbook = xlsxwriter.Workbook('test.xlsx') 
@@ -59,7 +60,8 @@ workbook.close()
 # Write B,[REST OF LINE] with B underlined into XLSX
 # Write B again, normally, into the right column
 
-
+# def mainstream(word_list, freq_list):
+    
 
 
 
