@@ -52,19 +52,8 @@ for i,phrase in enumerate(duplist):
 # Output the underlined file
 document.save(output_file)
 
-# Handy extra file we're making for frequency list in order
-print("Creating frequency list for program 2...")
-
-doc = Document()
-doc.styles['Normal'].paragraph_format.space_after = 0
-
+# Sorting the dictionary by frequency
 sortFreq = sorted(freqCount.items(),key = operator.itemgetter(1), reverse=True)
-
-for key,val in sortFreq:
-    para = doc.add_paragraph()
-    run = para.add_run(key)
-
-doc.save("freqFile.docx")
 
 # Excel table output
 print("Creating Excel sheet output with frequency counts...")
