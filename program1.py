@@ -67,7 +67,7 @@ doc.save("freqFile.docx")
 # Excel table output
 print("Creating Excel sheet output with frequency counts...")
 
-workbook = xlsxwriter.Workbook('test.xlsx') 
+workbook = xlsxwriter.Workbook('frequencyTable.xlsx') 
 worksheet = workbook.add_worksheet()
 
 for (i,(key,val)) in enumerate(sortFreq):
