@@ -31,6 +31,8 @@ for i,phrase in enumerate(duplist):
     # First element
     if i == 0:
         freqCount[phrase] = 1
+        para = document.add_paragraph('')
+        run = para.add_run(phrase)
     else:
         if phrase in freqCount:
             freqCount[phrase] += 1
