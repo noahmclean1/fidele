@@ -81,9 +81,12 @@ for units in unitlist:
 		if topword != None:
 			break
 
-	# Check if none of the words were found, if so, pick the first (random)
+	# Check if none of the words were found, if so, write the whole line WITHOUT underlines and move on
 	if topword == None:
-		topword = toks[0]
+		# Write whole line in alphabetical order
+		rest = toks.sort()
+		# WRITE
+		continue
 
 	# Remove B from the read line, sort the rest
 	rest = toks.remove(topword)
