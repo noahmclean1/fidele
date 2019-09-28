@@ -1,27 +1,40 @@
 import sys
 from docx import Document # may need to install this package! 
-from io import StringIO
+import operator
 
+# Select file
 input_file = sys.argv[1]
 
-with open(input_file, 'rb') as f:
-	doc = Document(input_file)
-	fullText = []
-	for para in doc.paragraphs:
-		fullText.append(para.text)
-	print('\n'.join(fullText))
-	#source_stream = StringIO(f.read())
 
-# put lines of text into an array called lines 
-num_lines = len(lines)
-i = 0
-while i != num_lines - 1:
-    # number of occurrences of lines[i] = 1
-    line = lines[i]
-    j = i + 1
-    while j != num_lines - 1:
-        if lines[j] == line:
-            # underline lines[j]
-            # increment number of occurrences of that line
-        j++
-    i++
+# Read in the full file contents into duplist
+duplicateFile = open(input_file, 'rb')
+ulf = Document(duplicateFile)
+duplist = []
+for para in ulf.paragraphs:
+    duplist.append(para.text)
+
+# Initialize a dictionary for frequency counts
+freqCount = {}
+
+# Find frequencies and underline redundancies
+for i,phrase in enumerate(duplist):
+    # First element
+    if i == 0:
+        freqCount[phrase] = 1
+    else:
+        if phrase in freqCount:
+            freqCount[phrase] += 1
+            # Is the line the same as the one above? (redundant)
+            if phrase == duplist[i-1]:
+                # UNDERLINE IN DOCX
+                pass
+        else:
+            freqCount[phrase] = 1
+
+sortFreq = sorted(freqCount.items(),key = operator.itemgetter(1), reverse=True)
+
+for key,val in sortFreq:
+    if val > 5:
+        print("{} | {}".format(key,val))
+    else:
+        break
