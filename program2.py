@@ -19,6 +19,7 @@ def listToString(li):
 	for i,unit in enumerate(li):
 		if i == 0:
 			fullString = unit
+			continue
 		fullString = fullString + "," + unit
 	return fullString
 
@@ -101,7 +102,7 @@ for units in unitlist:
 		# Write whole line in alphabetical order
 		rest = toks
 		rest.sort()
-		worksheet.write_rich_string(i,0,listToString(rest))
+		worksheet.write(i,0,listToString(rest))
 		i += 1
 		continue
 
@@ -119,7 +120,7 @@ for units in unitlist:
 	restString = listToString(rest)
 
 	# Write B,[REST OF LINE] with B underlined into XLSX
-	worksheet.write_rich_string(i,0,underline,topword,restString)
+	worksheet.write_rich_string(i,0,underline,topword,",",restString)
 
 	# Write B again, normally, into the right column
 	worksheet.write(i,1,topword)
