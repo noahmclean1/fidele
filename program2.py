@@ -108,7 +108,7 @@ for units in unitlist:
 
 	# Special case: topword is the only one?
 	if len(toks) == 1:
-		worksheet.write_rich_string(i,0,underline,topword)
+		worksheet.write(i,0,topword,underline)
 		worksheet.write(i,1,topword)
 		i += 1
 		continue
