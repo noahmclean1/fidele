@@ -101,7 +101,7 @@ for units in unitlist:
 	if topword == None:
 		# Write whole line in alphabetical order
 		rest = toks
-		rest.sort()
+		rest.sort(key=lambda v: v.upper())
 		worksheet.write(i,0,listToString(rest))
 		i += 1
 		continue
@@ -116,7 +116,7 @@ for units in unitlist:
 	# Remove B from the read line, sort the rest
 	rest = toks
 	rest.remove(topword)
-	rest.sort()
+	rest.sort(key=lambda v: v.upper())
 	restString = listToString(rest)
 
 	# Write B,[REST OF LINE] with B underlined into XLSX
