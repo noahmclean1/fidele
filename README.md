@@ -1,6 +1,18 @@
 # fidele
 Code for Swahili Dictionary Project
 
+# HOW TO RUN **write_dictionary.bat**:
+1. open **write_dictionary.bat**
+2. copy all the text in the file
+3. open **Notepad** on your computer. you can find it by typing "notepad" into the search bar at the bottom left and 
+4. paste the text from **write_dictionary.bat** into Notepad
+5. click **File** in the top left
+6. click **Save As**
+7. where it says **File name:** at the bottom, type "write_dictionary.bat"
+8. click **Save** on the bottom left
+9. go to where you saved the file and double-click it
+
+# If you are working in Terminal:
 Setup:
 ```
 git clone https://github.com/noahmclean1/fidele.git
