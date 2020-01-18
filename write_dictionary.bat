@@ -4,12 +4,13 @@ git clone https://github.com/noahmclean1/fidele.git
 ECHO Entering GitHub repository ...
 cd fidele\
 ECHO Installing packages ...
-python -m pip install python-docx --user
-python -m pip install xlsxwriter
-python -m pip install xlrd
-python -m pip install xlwt
+:: python -m pip install operator
+python3 -m pip install python-docx
+python3 -m pip install xlsxwriter
+python3 -m pip install xlrd
+python3 -m pip install xlwt
 ECHO Running program 1 ...
-python3 program1.py English_entries_with_DUPLICATES_WORD_LIST.docx redundantLines.docx
+python program1.py English_entries_with_DUPLICATES_WORD_LIST.docx redundantLines.docx
 ECHO Opening Word file with redundant lines underlined ...
 redundantLines.docx
 ECHO Opening Excel file with frequency table ...
