@@ -1,13 +1,13 @@
 @ECHO OFF
 ECHO Running program 1 ...
-SET /P dups=What Word document (in the fidele folder) would you like to run program 1 on (underline redundant lines and make frequency table)? 
+SET /P dups=What Word document (in the fidele folder) would you like to run Program 1 on (underline redundant lines and make frequency table)? 
 python program1.py %dups% redundantLines.docx
 ECHO Opening Word file with redundant lines underlined ...
 redundantLines.docx
-SET /P x="Continue?"
 ECHO Opening Excel file with frequency table ...
 frequencyTable.xlsx
 ECHO Running program 2 ...
-python3 program2.py English_SERIES_alpha_TEXT.docx frequencyTable.xlsx
+SET /P phrases=What Word document (in the fidele folder) would you like to run Program 2 on (identify and sort by reference words)? 
+python3 program2.py %phrases% frequencyTable.xlsx
 ECHO Opening Excel file with reference table ...
 referenceTable.xlsx
