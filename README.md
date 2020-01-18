@@ -19,7 +19,7 @@ Code for Swahili Dictionary Project
 
 `What Word document (in the fidele folder) would you like to run Program 1 on (underline redundant lines and make frequency table)?`
 
-Enter the name of the document making sure to have the .docx extension (e.g. English_entries_with_DUPLICATES_WORD_LIST.docx).
+Enter the name of the document making sure to have the .docx extension (e.g. **English_entries_with_DUPLICATES_WORD_LIST.docx**).
 
 This will start running Program 1. 
 
@@ -29,7 +29,7 @@ The program will then open the new Excel file named **frequencyTable.xlsx**. Aga
 
 `What Word document (in the fidele folder) would you like to run Program 2 on (identify and sort by reference words)?`
 
-Enter the name of the document making sure to have the .docx extension (e.g. English_SERIES_alpha_TEXT.docx).
+Enter the name of the document making sure to have the .docx extension (e.g. **English_SERIES_alpha_TEXT.docx**).
 
 This will start running Program 2. 
 
