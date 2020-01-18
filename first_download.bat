@@ -5,3 +5,4 @@ python3 -m pip install python-docx
 python3 -m pip install xlsxwriter
 python3 -m pip install xlrd
 python3 -m pip install xlwt
+INSTRUCTIONS.docx
