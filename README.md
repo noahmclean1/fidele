@@ -18,6 +18,7 @@ Code for Swahili Dictionary Project
 3. click on **run_programs.bat**. this will run the programs for you, and it will ask you the following questions:
 
 `What Word document (in the fidele folder) would you like to run Program 1 on (underline redundant lines and make frequency table)?`
+
 Enter the name of the document making sure to have the .docx extension (e.g. English_entries_with_DUPLICATES_WORD_LIST.docx).
 
 This will start running Program 1. 
@@ -27,6 +28,7 @@ It will open the new Word document named **redundantLines.docx** with underlined
 The program will then open the new Excel file named **frequencyTable.xlsx**. Again, to continue with the program, close the Excel file. (If you need to find it, it is in the **fidele** folder.)
 
 `What Word document (in the fidele folder) would you like to run Program 2 on (identify and sort by reference words)?`
+
 Enter the name of the document making sure to have the .docx extension (e.g. English_SERIES_alpha_TEXT.docx).
 
 This will start running Program 2. 
