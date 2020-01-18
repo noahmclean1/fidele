@@ -1,9 +1,4 @@
 @ECHO OFF
-ECHO Installing packages ...
-python3 -m pip install python-docx
-python3 -m pip install xlsxwriter
-python3 -m pip install xlrd
-python3 -m pip install xlwt
 ECHO Running program 1 ...
 SET /P dups=What Word document (in the fidele folder) would you like to run program 1 on (underline redundant lines and make frequency table)? 
 python program1.py %dups% redundantLines.docx
